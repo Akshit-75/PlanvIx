@@ -1,0 +1,197 @@
+###############################################################################
+# planvIx - PRODUCTION-GRADE GITIGNORE
+# Purpose: Deep security cleanup & repository hygiene
+###############################################################################
+
+# --- [1] CORE DEPENDENCIES (NEVER COMMIT) ---
+node_modules/
+**/node_modules/
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+backend/env/
+frontend/node_modules/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- [2] ENVIRONMENT & SENSITIVE SECRETS (CRITICAL) ---
+.env
+.env.*
+!.env.example
+*.env
+**/*secrets*
+**/*secret*
+**/credentials.json
+**/config.prod.json
+client_secret_*.json
+razorpay_*.csv
+razorpay_*.txt
+*.key
+*.pem
+*.cert
+*.p12
+*.pfx
+.test_token.txt
+**/jwt_secret*
+**/groq_key*
+**/serpapi_key*
+**/openai_key*
+
+# --- [3] DATABASE & STORAGE ---
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+ruvector.db
+mongodb_data/
+storage/
+temp/
+tmp/
+
+# --- [4] LOGS & DEBUGGING ---
+*.log
+logs/
+**/logs/
+crash_log.txt
+error_log.txt
+server_log.txt
+validation_errors.log
+build_error.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- [5] FRONTEND & BUILD ARTIFACTS (VITE/REACT) ---
+dist/
+**/dist/
+build/
+**/build/
+.vercel
+.next/
+.turbo/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+vite.config.js.timestamp-*
+*.mjs.timestamp-*
+
+# --- [6] IDE & EDITOR CONFIGS ---
+.vscode/
+.idea/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+pyrightconfig.json
+
+# --- [7] AI AGENT & WORKFLOW ARTIFACTS ---
+.agent/
+.agents/
+.claude/
+.claude-flow/
+.gemini/
+.kilo/
+.swarm/
+.gsd/
+get-shit-done-*/
+scripts/
+adapters/
+.mcp.json
+
+# --- [8] DOCUMENTATION & LARGE BINARIES (ROOT CLEANUP) ---
+docs/
+documentation/
+final\ doc/
+"final doc/"
+*.docx
+*.pdf
+*.pptx
+*.ppt
+*.odt
+*.xls
+*.xlsx
+review_1.pptx
+abstract.odt
+
+# --- [9] IMAGE & DIAGRAM ARTIFACTS (CLEAN ROOT) ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.webp
+DFD.png
+DFD_planvx.png
+ERD_planvx.png
+ER_UPDATED.jpeg
+System Architecture_planvx.png
+"WhatsApp Image*"
+
+# --- [10] OS SPECIFIC ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- [11] ONE-OFF SCRIPTS & JUNK ---
+debug_*.py
+test_*.py
+check_*.py
+reproduce_*.py
+verify_*.py
+flush_*.py
+rename_*.py
+pllaner*.txt
+strategy_test.json
+test_strategy_output.json
+health_check*.json
+
+# --- [12] ALL MARKDOWN FILES (Requested) ---
+*.md
+
+# --- [13] EXCEPTIONS (TRACK THESE) ---
+!README.md
+!package.json
+!package-lock.json
+!requirements.txt
+!backend/requirements.txt
+!docker-compose.yml
+!Dockerfile
+!Procfile
+!vercel.json
+!frontend/vercel.json
+!vite.config.js
+!tailwind.config.js
+!postcss.config.js
+!components.json
+!tsconfig.json
