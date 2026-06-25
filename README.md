@@ -135,5 +135,5 @@ cd frontend && npm install && npm run dev
 
 <div align="center">
   <h3>⚡ LLaMA 3.3 70B • 📊 Enterprise Admin • 🛡️ Production Hardened</h3>
-  <p><strong>Developed by Ayush Lakhani</strong></p>
+  <p><strong>Developed by Akshit Movaliya</strong></p>
 </div>
